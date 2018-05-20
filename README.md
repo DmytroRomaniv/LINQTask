@@ -1,0 +1,2 @@
+# LINQTask
+University homework (LINQ)
