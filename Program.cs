@@ -10,7 +10,8 @@ namespace LINQTask
     {
         static void Main(string[] args)
         {
-            FileReader.ReadFile("data.txt");
+            FileReader.DoGroup1("dataGroup1.txt");
+            Group2FileReader.DoGroup2("dataGroup2.txt");
         }
     }
 }

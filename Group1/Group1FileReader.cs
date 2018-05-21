@@ -9,7 +9,7 @@ namespace LINQTask
 {
     class FileReader
     {
-        public static void ReadFile(string fileName)
+        public static void DoGroup1(string fileName)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace LINQTask
                     }
                 }
 
-                FileReader.DoGroup1(readedLines);
+                FileReader.Group1Options(readedLines);
             }
             catch(FileNotFoundException error)
             {
@@ -41,13 +41,13 @@ namespace LINQTask
             }
         }
 
-        public static void DoGroup1(List<string[]> task)
+        protected static void Group1Options(List<string[]> task)
         {
             if(task==null)
             {
                 return;
             }
-            using (StreamWriter result = new StreamWriter("result.txt"))
+            using (StreamWriter result = new StreamWriter("Group1result.txt"))
             { 
                 foreach (var data in task)
                 {
@@ -92,4 +92,6 @@ namespace LINQTask
             }
         }
     }
+
+
 }

@@ -22,7 +22,7 @@ namespace LINQTask
 
         public static IEnumerable<string> Task3(IEnumerable<string> data)
         {
-            IEnumerable<string> array = data.Where(i => Int32.TryParse(i, out int integer) && Int32.Parse(i) > 9 && Int32.Parse(i) < 100).OrderBy(i => i);
+            IEnumerable<string> array = data.Where(i => Int32.TryParse(i, out int integer) && Int32.Parse(i) > 9 && Int32.Parse(i) < 100).OrderBy(i => Int32.Parse(i));
             return array;
         }
 
